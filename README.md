@@ -88,57 +88,30 @@ As an application, a user may want to fit a histogram with a function `f(x, a, b
 It can be seen that after binning back to the original histogram size, the fit uncertainties of the probabilistic algorithm are much closer to the original values. The deterministic method improved the estimated uncertainties by roughly a factor of 0.5 and it strongly changed the appearance of the histogram.
 
 ## 2 Prerequisites <a name="prerequisites"></a>
-* python3
+* python>=3.6
 * numpy
-* matplotlib
 * scipy
+* matplotlib (optional, for plotting)
+* [PyROOT](https://root.cern) (optional, for reading ROOT files)
+* [root_numpy](https://github.com/scikit-hep/root_numpy) (optional, for faster reading of ROOT files)
+* [uproot](https://github.com/scikit-hep/uproot) (optional, for reading ROOT files without ROOT installed)
 
 ## 3 Usage <a name="usage"></a>
 
-After obtaining the repository from github and entering the directory
+After cloning the repository, you can use hari by executing
 
 ```
-$ git clone https://github.com/uga-uga/hari.git
-$ cd hari/
+$ ./hari.py [ARGUMENTS] HISTOGRAMFILE
 ```
 
-, the program can be used like
+Use `./hari.py --help` to get more information.
 
-```
-$ python3 hari.py [ARGUMENTS] HISTOGRAMFILE
-```
-
-Alternatively, the code can be made executable [[c]](#footnote_c)
-
-```
-$ chmod +x hari.py
-```
-
-and after that simply called like
-
-```
-$ ./hari.py
-```
-
-A complete list of arguments can be obtained by calling `hari` with the `--help` option
-
-```
-$ ./hari.py --help
-```
-
-
-<a name="footnote_c">[c]</a> Making the file `hari.py` an executable works because of the
-
-```
-#!/usr/bin/env python3
-```
-
-shebang at the beginning. If the `python3` executable is somewhere else on the system, the path needs to be changed accordingly.
 
 ## 4 License <a name="license"></a>
-Copyright (C) 2017
+Copyright © 2017, 2018
 
 U. Gayer (gayer.udo@gmail.com)
+O. Papst (opapst@ikp.tu-darmstadt.de)
 
 This code is distributed under the terms of the GNU General Public License. See the COPYING file for more information.
 

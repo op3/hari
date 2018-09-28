@@ -1,0 +1,10 @@
+# Compiled filed and build directories
+*.pyc
+__pycache__
+
+# pytest cache
+.cache
+
+# Other
+.python-version
+*.egg-info
